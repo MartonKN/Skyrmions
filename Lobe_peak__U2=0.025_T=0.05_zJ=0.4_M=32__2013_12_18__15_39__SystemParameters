@@ -1,0 +1,62 @@
+Grid size:
+SystemParameters::Mx=32,
+SystemParameters::My=32,
+SystemParameters::Mz=32,
+
+SystemParameters::ax=1.0000000000,
+SystemParameters::ay=1.0000000000,
+SystemParameters::az=1.0000000000,
+
+Maximal imaginary time and imaginary time step of the GPE simulation
+SystemParameters::tmax=1.0000000000,
+SystemParameters::dt=0.0005000000,
+
+Physical parameters (energy measured in units of V0=(V11+V22)/2):
+SystemParameters::T=0.0500000000,
+SystemParameters::J=0.0666670000,
+SystemParameters::mu_0=0.3000000000,
+SystemParameters::V0=1.0000000000,
+SystemParameters::V2=0.0250000000,
+SystemParameters::trapx=0.0016649324,
+SystemParameters::trapy=0.0016649324,
+SystemParameters::trapz=0.0016649324,
+
+Parameters for the splines:
+SystemParameters::Nmax=2,
+SystemParameters::AbsPsi_Max=0.3000000000,
+SystemParameters::SqrtMinusDmu_Max=1.1267435597,
+SystemParameters::AbsPsi_Steps=71,
+SystemParameters::AbsF_Steps=71,
+SystemParameters::SqrtMinusDmu_Steps=71,
+SystemParameters::D_AbsPsi=0.0042857143,
+SystemParameters::D_AbsF=0.0142857143,
+SystemParameters::D_SqrtMinusDmu=0.0160963366,
+
+Random noise parameters:
+SystemParameters::addNoiseTimes[0]=0.0050000000,
+SystemParameters::noOfFreqs[0]=40,
+SystemParameters::maxFreqRate[0][0]=0.3000000000,	SystemParameters::maxFreqRate[0][1]=0.3000000000,	SystemParameters::maxFreqRate[0][2]=0.3000000000,	
+SystemParameters::randomnessRate[0][0]=0.5000000000,	SystemParameters::randomnessRate[0][1]=0.5000000000,	SystemParameters::randomnessRate[0][2]=0.5000000000,	
+
+Saving times:
+SystemParameters::saving_times[0]=0.0000000000,
+SystemParameters::saving_times[1]=0.0002000000,
+SystemParameters::saving_times[2]=0.0008000000,
+SystemParameters::saving_times[3]=0.0020000000,
+SystemParameters::saving_times[4]=0.0100000000,
+SystemParameters::saving_times[5]=0.0500000000,
+SystemParameters::saving_times[6]=0.1000000000,
+SystemParameters::saving_times[7]=0.2000000000,
+SystemParameters::saving_times[8]=0.3000000000,
+SystemParameters::saving_times[9]=0.4000000000,
+SystemParameters::saving_times[10]=0.5000000000,
+SystemParameters::saving_times[11]=0.7000000000,
+SystemParameters::saving_times[12]=0.9000000000,
+SystemParameters::saving_times[13]=0.9990000000,
+
+This variable encodes how the saving times appear in the filenames:
+SystemParameters::dispform_saving_times[0]= 3,
+SystemParameters::dispform_saving_times[1]= 6,
+
+Number of processors to be used:
+SystemParameters::nthreads=1,

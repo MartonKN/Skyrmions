@@ -1,0 +1,47 @@
+#!/bin/bash
+#PBS -N job__Lobe_peak__U2=0.025_T=0.05_zJ=0.4_M=32__2013_12_18__15_39
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=120:00:00
+#PBS -l mem=326mb
+#PBS -l file=189M
+#PBS -j oe
+#PBS -o /home/kanasznm/Skyrmions/ImaginaryTime/currentRuns/Lobe_peak__U2=0.025_T=0.05_zJ=0.4_M=32__2013_12_18__15_39.out
+
+
+################
+SRC_FOLDER="/home/kanasznm/Skyrmions/ImaginaryTime/currentRuns"
+EXE="imagTimeGPESolver"
+################
+
+# mail is sent to you when the job starts and when it terminates or aborts
+#PBS -m abe -M kanasz-nagy.marton@wigner.bme.hu
+
+cd $PBS_O_WORKDIR
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel10/lib/:/opt/mkl-10.0/lib/em64t
+
+# PREPARATIONS FOR RUNNING:
+WORKDIR="WDIR__Lobe_peak__U2=0.025_T=0.05_zJ=0.4_M=32__2013_12_18__15_39"
+mkdir $WORKDIR
+cd $WORKDIR
+# copy input and exe files
+cp $SRC_FOLDER/Lobe_peak__U2=0.025_T=0.05_zJ=0.4_M=32__2013_12_18__15_39* ./
+cp $SRC_FOLDER/$EXE ./
+# Put run details to stdout:
+# Print system hostname
+hostname
+# Print path to the current directory
+pwd
+# ... and list its content
+ls
+
+# NECESSARY SCRIPT FOR COMPILATION ON SHELDON
+module add mkl-10.0
+# RUN PROGRAM
+./$EXE Lobe_peak__U2=0.025_T=0.05_zJ=0.4_M=32__2013_12_18__15_39__Filenames
+
+# COPY OUTPUT FILES
+cp ./* $SRC_FOLDER/
+rm -f *
+
+# EXIT
+exit 0
