@@ -1,9 +1,0 @@
-The difference between ver6 and ver7 is that the latter saves the expectation values of 
-the annihilation operators <Phi_1>, <Phi_2> and <Phi_3>. So now one may use the auxiliary
-MATLAB program that plots a detailed picture of the TOF peaks
-
-/home/marton/Asztal/PhD/Skyrmionok/3_ThreeComponents/3_PlotTOF
-
-Furthermore, I've deleted those parts of the program from ver7 that were supposed to calculate
-the excitation spectrum of the skyrmion, but we never used them. One can put these features back
-to the program, by copying here all the files that begin with 'SPECT_' from the folder 'ver6'.
